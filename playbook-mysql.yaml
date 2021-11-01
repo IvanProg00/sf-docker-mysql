@@ -1,0 +1,9 @@
+---
+- hosts: local
+  become: true
+  tasks:
+    - name: Enable MySQL
+      service:
+        name: mysqld
+        enabled: true
+        state: started
